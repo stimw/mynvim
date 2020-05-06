@@ -1,4 +1,5 @@
 {
     "python.jediEnabled": false,
-    "explorer.icon.enableNerdfont": true
+    "explorer.icon.enableNerdfont": true,
+    "coc.preferences.extensionUpdateCheck": "never"
 }
