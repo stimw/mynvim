@@ -57,7 +57,8 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
+Plug 'liuchengxu/vim-clap'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
@@ -76,6 +77,12 @@ let g:coc_global_extensions = ['coc-yank','coc-snippets','coc-lists','coc-highli
 
 colorscheme seoul256
 let g:seoul256_srgb = 1
+
+" disable tabline in dashboard buffer for dashboard
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+" dashboard work with indentline plugin
+let g:indentLine_fileTypeExclude = ['dashboard']
+let g:dashboard_default_header = 'pikachu'
 
 " TextEdit might fail if hidden is not set.
 set hidden
